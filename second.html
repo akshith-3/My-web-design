@@ -1,0 +1,47 @@
+<html>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function validateform() {
+      var mail = document.myform.mail.value;
+      var password = document.myform.password.value;
+      if (mail == "akshith@gmail.com" && password == "1233456") {
+        alert("login successful");
+        return false;
+      }
+      if (mail == null || mail == "") {
+        alert("mail can't be blank");
+        return false;
+      } else if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+    }
+  </script>
+  <body
+    style="
+      background-image: url('https://images.creativemarket.com/0.1.0/ps/5516004/2000/2000/m1/fpnw/wm0/painted-ground-.jpg?1544153362&s=0f194db666e61a393ea1e0e7946ab568');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    "
+    align="center">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <form
+      name="myform"
+      method="get"
+      action="loginsuccess.html"
+      onsubmit="return validateform()">
+      <h1>Enter your Email</h1>
+      <br />
+      email: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input
+        type="email"
+        name="mail" /><br />
+      <br />
+      password:&nbsp&nbsp&nbsp<input type="password" name="password" /><br />
+      <br />
+      <a href="forgotpassword.html">Forgot mail</a>
+      <br />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
